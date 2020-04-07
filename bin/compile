@@ -4,16 +4,16 @@
 echo "-----> Installing Ghostscript 9.52"
 
 BUILD_DIR=$1
-PACKAGE="http://downloads.ghostscript.com/public/ghostscript-9.52.tar.gz"
+PACKAGE="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs952/ghostscript-9.52-linux-x86_64.tgz"
 LOCATION="$BUILD_DIR/vendor/gs/bin"
 
 mkdir -p $LOCATION
-curl -O $PACKAGE -s
+wget $PACKAGE
 
 echo "-----> Building runtime environment for Ghostscript"
 
-tar xzvf ghostscript-9.52.tar.gz
-cd ghostscript-9.52
+tar xvf ghostscript-9.52-linux-x86_64.tgz
+cd ghostscript-9.52-linux-x86_64
 ./configure --disable-cups --disable-gtk --with-drivers=FILES
 make
 cp bin/gs ~/bin
