@@ -13,8 +13,8 @@ arrow() {
   sed -u 's/^/-----> /'
 }
 
-GS_VERSION_SEMVER="9.25"
-GS_VERSION="925"
+GS_VERSION_SEMVER="9.18"
+GS_VERSION="918"
 echo "Installing Ghostscript $GS_VERSION_SEMVER using build directory $1" | arrow
 
 PACKAGE="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$GS_VERSION/ghostscript-$GS_VERSION_SEMVER-linux-x86_64.tgz"
