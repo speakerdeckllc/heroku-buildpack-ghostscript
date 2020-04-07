@@ -45,6 +45,6 @@ cp -R $GS_VENDOR/bin/* $BUILD_DIR/bin/
 mkdir -p $BUILD_DIR/.profile.d
 echo 'export PATH="$HOME/bin:$PATH"' > $BUILD_DIR/.profile.d/ghostscript.sh
 
-cat <<EOF > export
-export PATH=$BUILD_DIR/bin:$PATH
-EOF
+PROFILE_PATH="$BUILD_DIR/.profile.d/ghostscript.sh"
+ACTUAL_INSTALL_PATH="$HOME/vendor/ghostscript"
+echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
