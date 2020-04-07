@@ -5,6 +5,7 @@ echo "-----> Installing Ghostscript 9.52"
 
 BUILD_DIR=$1
 PACKAGE="http://downloads.ghostscript.com/public/ghostscript-9.52.tar.gz"
+LOCATION="$BUILD_DIR/vendor/gs/bin"
 
 mkdir -p $LOCATION
 curl -O $PACKAGE -s
