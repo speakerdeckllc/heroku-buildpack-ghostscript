@@ -14,7 +14,7 @@ arrow() {
   sed -u 's/^/-----> /'
 }
 
-GS_VERSION="10.06.0"
+GS_VERSION="10.07.1"
 echo "Installing Ghostscript $GS_VERSION using build directory $BUILD_DIR" | arrow
 
 GS_VENDOR="$BUILD_DIR/vendor/ghostscript"
